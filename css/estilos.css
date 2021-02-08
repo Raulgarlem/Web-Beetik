@@ -1,0 +1,390 @@
+*{
+	box-sizing: border-box;
+}
+
+html{
+	font-size: calc(1em + 1vw);
+}
+
+body{
+	font-family: Arial, Helvetica, sans-serif, 'Droid Sans', sans-serif;	
+	font-size: 1rem;
+	color:#E7A717;
+	text-align:center;
+}
+
+/* First breakpoint at 576px */
+/* Inherits mobile styles, but floats containers to make columns */
+@media all and (min-width: 36em){
+	.main { float: left; width:60%; }
+	.sidebar { float: left; width:40%; }
+}
+
+/* Second breakpoint at 800px */
+/* Adjusts column proportions, tweaks base H1 */
+@media all and (min-width: 50em){
+	.main { width:70%; }
+	.sidebar { width:30%; }
+
+	/* You can also tweak any other styles in a breakpoint */
+	H1 { color: blue; font-size:1.2em }
+}
+
+/*-------------------------------------------------
+RESPONSIVE 1st Layer (BIENVENIDOS)
+-------------------------------------------------*/
+.bienvenidos{
+	background:linear-gradient(180deg, #002F67, #002F67,#666699, #381958);
+	background-size:cover;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.display-4 {
+    font-size: 2.2rem;
+    font-weight: bold;
+    font-family: News706 BT Bold;
+    color: white;
+	margin-top: 12rem;
+}
+
+.Beetik-text{
+    font-size: 2.2rem;
+    font-family: AUTO;
+    font-style: normal;
+    color: white;
+}
+
+.desc-text{
+    	top: 10vh;
+    	right: 15%;
+    	font-size: 0.7rem;
+    	color: white;
+}
+
+@media only screen and (max-width: 482px){
+	.desc-text{
+		position: relative;
+    	float: left;
+    	top: 2vh;
+    	left: 13%;
+    	font-size: 0.7rem;
+    	color: white;
+	}
+}
+
+/*--------------------------------------------------
+ANCHURA DEL SITIO
+---------------------------------------------------*/
+.contenedor{
+    height: 15vh;
+}
+
+/*--------------------------------------------------
+TAMAÑO ELEMENTOS (IMG)
+---------------------------------------------------*/
+.logo img{
+	width: 60%;
+	padding-top: 15%;
+}
+
+.logo figcaption{
+	font-size: 0.4rem;
+}
+
+img.float-xl-left{
+	width: 3.5rem;
+}
+
+.presentacion img{
+	width: 7rem;
+}
+
+.imginfo{
+	width: 5rem;
+}
+
+.imgsocial{
+	width: 2.2rem;
+}
+
+.fa, .fas {
+    padding-right: 9px;
+}
+
+/*--------------------------------------------------
+ENCABEZADO
+---------------------------------------------------*/
+.encabezado{
+	position: fixed;
+	width: 100%;
+	top:0;
+	left:0;
+	-webkit-transform: translateY(0%);
+	-ms-transform: translateY(0%);
+	transform: translateY(0%);
+	background: radial-gradient(280px at 25% 10%, #0460ad, #002f67);
+	transition: all 300ms ease;
+	z-index: 1;
+	height: 17.5vh;
+}
+
+.encabezado.sticky{
+	-webkit-transform: translateY(-5.5vh);
+	-ms-transform: translateY(-5.5vh);
+	transform: translateY(-5.5vh);  /*Contenedor.height*/
+}
+
+.encabezado.sticky.h-down{
+	transform: translateY(-5.5vh); /*Contenedor.height*/
+}
+
+.encabezado.h-down{
+	transform: translateY(0%);
+}
+
+.fixed-top{
+	/*background: radial-gradient(280px at 25% 10%, #80bff7, #0460ad);*/
+	background: radial-gradient(280px at 25% 10%, #0460ad, #002f67);
+	top: 0;
+}
+
+.logo{
+	grid-area: btklogo;
+	display: flex;
+	justify-content: right;
+	margin-right: 2em;
+	margin-left: auto;
+}
+
+.Beetik-text{
+	grid-area: btktxt;
+	display: flex;
+	justify-content: left;
+}
+
+.desc-text{
+	grid-area: btkdesc;
+}
+
+.grid-container{
+	display: grid;
+	grid-template-areas: 
+	'btklogo btktxt btktxt'
+	'btklogo btktxt btktxt'
+	'btklogo btkdesc btkdesc';
+}
+
+.menu{
+	background: rgb(0, 47, 102);
+	font-size: 2rem;
+	margin-top: 1px;
+	position: absolute;
+	width: 100%
+}
+
+h1{
+	font-size: 0.5rem;
+}
+
+.navbar-toggler {
+	padding: 0.25rem 0.75rem;
+	font-size: 0.7rem;
+	line-height: 1;
+	background-color: rgb(0, 0, 0);
+	border: 1px solid transparent;
+	border-radius: 0.25rem;
+}
+
+.fa-bars:before {
+	content: "\f0c9";
+	color: #FFFFFF;
+}
+
+.introduccion-presentacion{
+	font-size: 0.3rem;
+}
+
+div h2{
+	font-size: 2rem;
+	margin-top: 12rem;
+	text-align: center;
+}
+
+h3, .h3 {
+    font-size: 1rem;
+    border-bottom: double;
+}
+
+.navbar-light .navbar-nav .show > .nav-link, .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .nav-link.active {
+	color: rgb(55, 124, 209);
+	background: rgba(140, 161, 219, 0.54);
+}
+
+.navbar-light .navbar-nav .nav-link {
+	color: #e7f2fffa;
+	text-align: center;
+}
+
+.nav-link {
+    display: block;
+    padding: 0.5rem 0.5rem;
+}
+
+.mascara{
+	margin-top: 4%;
+}
+
+.boton-Aprender{
+	margin-top: 2em;
+}
+
+@media (min-width: 992px){
+h3, .h3 {
+    font-size: 0.7rem;
+    border-bottom: none;
+    margin: 0;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-right: 6vw;
+    margin-left: 6vw;
+}
+
+}
+
+.btn-outline-primary {
+    color: #e7efc6d9;
+    border-color: #e7efc6d9;
+}
+/********************
+Dibujos
+***********************/
+.logo{
+}
+
+.circle {
+  	display: flex;
+    vertical-align: middle;
+    background: #000000;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
+.circle2 {
+  	margin: auto;
+    border-radius: 50%;
+    width: 90%;
+    height: 90%;
+    background: white;
+  
+}
+.circle3 {
+  	margin:auto;
+    padding-top: 5%;
+    border-radius: 50%;
+    width: 92%;
+    height: 100%;
+    background: black;
+}
+
+.padre{
+    /* margin: 10px auto; */
+    height: 5em;
+    width: 5em;
+    top: 10%;
+    left: 15%;
+}
+
+/*--------------------------------------------------
+PRESENTACION
+---------------------------------------------------*/
+.presentacion{
+	font-size: 0.5rem;
+}
+
+/*--------------------------------------------------
+BLOQUE CONTENIDO
+---------------------------------------------------*/
+.bloque-contenido{
+	background: linear-gradient(180deg, #381958, #381958, #381958, #E7A717)
+}
+
+.articulos .mb-3{
+	margin-bottom: 1rem !important;
+    width: 85%;
+}
+
+.card-title{
+	font-size: 2rem;
+    margin-top: 0;
+    text-align: center;
+}
+
+.col-md-4{
+	margin: auto;
+}
+
+.card-img{
+	width: 95%;
+}
+
+.card-body{
+	padding: 0.8rem;
+}
+
+.card{
+	background-color: rgba(18, 220, 0, 0.13);
+}
+/*--------------------------------------------------
+COMPLEMENTARIO
+---------------------------------------------------*/
+
+
+
+/*--------------------------------------------------
+SUSCRIPCIÓN
+---------------------------------------------------*/
+.suscripcion{
+	background-color: rgb(100,0,0)
+}
+
+section h2{
+	margin-top: 0;
+}
+
+/*--------------------------------------------------
+PIE DE PAGINA
+---------------------------------------------------*/
+.piedepagina{
+	background-color: orange;
+}
+
+/*--------------------------------------------------
+REDES SOCIALES
+---------------------------------------------------*/
+
+.social.sticky{
+	position: fixed;
+    top: 70%;
+    right: 0;
+}
+
+.social.sticky a{
+	display: block;
+	margin-bottom: 4px;
+	opacity: 0.8;
+}
+
+.social.sticky a:hover{
+	opacity: 1;
+}
+
+.social.sticky img{
+	border-radius: 50%;
+	display: block;
+}
