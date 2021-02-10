@@ -2,17 +2,18 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="keywords" content="Cursos, Corte, Laser, Impresion, 3D, Electrónica, STL, Videojuegos, Ingeniería, Proyectos, Nuevo, Manufactura, Diseño, Grabado, Capacitación, Tecnología, Desrrollo, Artificial, Calidad, Beetik, Taller, Crear, STEAM, Makerspace, CAD, CAE, CAM">
+	<meta name="keywords" content="Cursos, Corte, Laser, Impresion, 3D, Electrónica, Videojuegos, Ingeniería, Proyectos, Nuevo, Manufactura, Diseño, Grabado, Capacitación, Tecnología, Desrrollo, Artificial, Calidad, Beetik, Taller, Crear, STEAM, Makerspace, CAD, CAE, CAM">
 	<meta name="description" content="Estamos enfocados en capacitar en nuevas tecnologías, y ofrecer servicios de manufactura de calidad para desarrollo de proyectos">
 	<meta name="title" content="Beetik México. Proyectos, manufactura, cursos y capacitación">
 	<meta name="author" content="Beetik México">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	
 	<!-- Bootstrap CSS -->
-	<!--<link rel="stylesheet" href="css/bootstrap.css">-->
+	<link rel="stylesheet" href="css/bootstrap.css">
 
 	<!-- Carga de fuentes FontAwesome -->
 	<link rel="stylesheet" href="css/all.min.css">
+
 
 	<title>Beetik México. Proyectos, Manufactura y Capacitación</title>
 	<link rel="shortcut icon" href="img/Estrella_N_transparente.png" />
@@ -28,17 +29,14 @@
 
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-	<!--momentaneo<script src="js/bootstrap.min.js"></script>-->
-
-	<!--<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>-->
-	
-	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 
-	<!--<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>-->
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 	<!--End of JavaScript -->
 	
-<div data-role = "page">
+<div data-role = "page" data-theme = "d">
 
 	<!--Encabezado-->
 	<section class="bienvenidos" >
@@ -52,7 +50,9 @@
 								<div class="circle2">
 								<div class="circle3">
 
+								<figure class="float-ms-left">
 									<img src="img/estrella_transparente.png" alt="BEETIK logo" title ="Beetik Principal">
+								</figure>
 							</div>
 						</div>
 						</div>
@@ -67,35 +67,36 @@
 			
 			<div class="menu">
 				<!--Barra de Navegación-->
-				<nav class="navbar" role="navigation" id="menu_principal">
+				<nav class="navbar shadow navbar-expand-lg .bg-gradient-dark navbar-light navbar-toggler" role="navigation">
 					
-					<a href="#!"><img src="img/Beetik3D_white1.png" alt="Beetik MX" title ="Beetik Principal"class="nav-logo"></a>
+					<a href="#!"><img src="img/Beetik3D_white1.png" alt="Beetik MX" title ="Beetik Principal"class="float-xl-left"></a>
 
-					<input type="checkbox" id="check" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-      					<label for="check" class="checkbtn">
-        					<i class="fas fa-bars"></i>
-      					</label>					
+					<button class="navbar-toggler float-ms-right" type="button" data-toggle="collapse" data-target="#menu_principal" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+
+						<i class="fas fa-bars"></i>
+
+					</button>
 					
-						<ul class="menu-items">
-							<li class="nav-items active">
-								<a class="nav-link-item" href="index.html"><h3><span class="fas fa-home"></span>Inicio</h3></a>
+					
+
+
+
+					<div class="collapse navbar-collapse" id="menu_principal">
+						<ul class="navbar-nav mr-auto mt-2 mt-md-0">
+							<li class="nav-item active">
+								<a class="nav-link" href="index.html"><h3><span class="fas fa-home"></span>Inicio</h3></a>
 							</li>
-							<!--<li class="nav-items">
-								<a class="nav-link-item" href="nosotros.html"><h3><i class="fas fa-info-circle"></i>Nosotros</h3></a>
-							</li>-->
-							<li class="nav-items">
-								<a class="nav-link-item" href="index.html"><h3><span id="3dicon" class="fab fa-codepen fa-battle-net fa-spin"></span>Modelos 3D</h3></a>
+							<li class="nav-item">
+								<a class="nav-link" href="nosotros.html"><h3><i class="fas fa-info-circle"></i>Nosotros</h3></a>
 							</li>
-							<li class="nav-items">
-								<a class="nav-link-item" href="index.html"><h3><span class="fas fa-boxes"></span>Compra Material</h3></a>
+							<li class="nav-item">
+								<a class="nav-link" href="servicios.html"><h3><i class="fas fa-concierge-bell"></i>Servicios</h3></a>
 							</li>
-							<li class="nav-items">
-								<a class="nav-link-item" href="servicios.html"><h3><i class="fas fa-concierge-bell"></i>Más Servicios</h3></a>
-							</li>
-							<li class="nav-items">
-								<a class="nav-link-item" href="contacto.html"><h3><i class="fas fa-at"></i>Contacto</h3></a>
+							<li class="nav-item">
+								<a class="nav-link" href="contacto.html"><h3><i class="fas fa-at"></i>Contacto</h3></a>
 							</li>
 						</ul>
+					</div>
 
 				</nav>
 				<div class="clearfix"></div>

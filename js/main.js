@@ -1,7 +1,48 @@
 
+
+//DETECTAR NAVEGADORES
+navigator.sayswho= (function(){
+    var ua= navigator.userAgent, tem,
+    M= ua.match(/(vivaldi|opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i) || [];
+    if(/trident/i.test(M[1])){
+        tem=  /\brv[ :]+(\d+)/g.exec(ua) || [];
+        return 'IE '+(tem[1] || '');
+    }
+    if(M[1]=== 'Chrome'){
+        tem= ua.match(/\b(OPR|Edge?)\/(\d+)/);
+        if(tem!= null) return tem.slice(1).join(' ').replace('OPR', 'Opera').replace('Edg ', 'Edge ');            
+    }
+    M= M[2]? [M[1], M[2]]: [navigator.appName, navigator.appVersion, '-?'];
+    if((tem= ua.match(/version\/(\d+)/i))!= null) M.splice(1, 1, tem[1]);
+    return M.join(' ');
+})();
+
+var browser = navigator.sayswho.split(" ");
+
+if(browser[0] == 'Chrome')
+{
+	document.addEventListener('DOMContentLoaded', function() {
+  	var element = document.getElementById("3dicon");
+  	element.className = element.className.replace(/\bfa-codepen\b/g, "");
+	});
+	
+	//alert(browser[0]);
+}
+else{
+	document.addEventListener('DOMContentLoaded', function() {
+  	var element = document.getElementById("3dicon");
+  	element.className = element.className.replace(/\bfa-battle-net\b/g, "");
+  	element.className = element.className.replace(/\bfa-spin\b/g, "");
+	});
+	//alert('no es chrome');
+}
+
+
+
+//ESCONDER ENCABEZADO
 $(document).ready(function(){
 	$(window).scroll(function(){
-		if($(document).scrollTop() > 100){
+		if($(document).scrollTop() > 50){
 			$('.social').addClass('sticky');
 			$('.encabezado').addClass('sticky');
 		}
